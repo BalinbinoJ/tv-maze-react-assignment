@@ -5,6 +5,7 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 import Title from './title'
 import ShowSearchForm from './ShowSearchForm'
+import ShowList from './ShowList'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
     <>
     <Title/>
     <ShowSearchForm/>
+    <ShowList/>
     </>
   )
 }

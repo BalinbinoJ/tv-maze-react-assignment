@@ -1,11 +1,30 @@
 // ShowSearchForm.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 function ShowSearchForm() {
     const [title, setTitle] = useState('');
 
-    const handleSubmit = (event) => {
-        event.preventDefault(); // Prevent form from actually submitting
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        /*
+        useEffect(() => {
+    const fetchShows = async () => {
+      const url = `https://api.tvmaze.com/search/shows?q=${title}`;
+      const response = await fetch(url);
+      if (!response.ok) {
+        console.error('Failed to fetch shows');
+        return;
+      }
+      const data = await response.json();
+      setTitle(data);
     };
+
+    fetchShows();
+  }, []);
+  */
+    };
+    
+
     return (
         <div className='form'>
         <h2> What Show Are You Looking For?</h2>
