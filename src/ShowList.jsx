@@ -25,6 +25,9 @@ function ShowList() {
       {shows.map((show) => (
         <article key={show.show.id} className="show-card">
           <h3>{show.show.name}</h3>
+          <h3>{show.show.premiered}</h3>
+          <h3>{show.show.summary}</h3>
+
         </article>
       ))}
 
