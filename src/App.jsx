@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Title from './title'
+import ShowSearchForm from './ShowSearchForm'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
     <Title/>
+    <ShowSearchForm/>
     </>
   )
 }
