@@ -1,22 +1,26 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 import Title from './title'
 import ShowSearchForm from './ShowSearchForm'
 import ShowList from './ShowList'
 
 function App() {
-  //const [count, setCount] = useState(0)
+  const [title, setTitle] = useState('');
+
+  const handleTitle = (data) => {
+    setTitle(data);
+    handleSubmit(data);
+    fetchShows(data);
+  };
+
 
   return (
     <>
-    <Title/>
-    <ShowSearchForm/>
-    <ShowList/>
+      <Title />
+      <ShowSearchForm handleSubmit={handleTitle} />
+      <ShowList/>
     </>
-  )
+  );
 }
 
 export default App
